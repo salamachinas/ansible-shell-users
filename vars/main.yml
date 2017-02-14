@@ -1,0 +1,4 @@
+users:
+  - name: 'ansible'
+    password: '$1$xyz$IfAWr/Pbmpx80TTPdTZV.0'
+    key: "{{ lookup('file', 'ansible.pub') }}"

@@ -1,0 +1,4 @@
+---
+- hosts: all
+  roles:
+    - {role: ansible-shell-users, authorized: ['ansible'], promoted: ['ansible']}

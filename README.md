@@ -3,7 +3,7 @@ ansible-shell-users
 
 This role manage shell users
 
-[![Ansible Galaxy](https://img.shields.io/ansible/role/xxxxxxx.svg)](https://galaxy.ansible.com/salamachinas/shell-users/)
+[![Ansible Galaxy](https://img.shields.io/ansible/role/15682.svg)](https://galaxy.ansible.com/salamachinas/shell-users/)
 
 Requirements
 ------------

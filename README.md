@@ -22,7 +22,25 @@ Hash password
 -------------
 
 ```sh
-openssl passwd -1 -salt xyz s3cr3t
+sudo apt-get install whois
+mkpasswd --method=sha-512
+```
+
+Example Playbook
+----------------
+
+```yaml
+- name: provision servers
+  hosts: all
+  become: true
+  roles:
+    - { role: 'salamachinas.shell-users', tags: 'shell-users' }
+  vars:
+    users:
+      - {name: 'ansible', password: '$1$xyz$IfAWr/Pbmpx80TTPdTZV.0'}
+      - {name: 'example', password: '$1$xyz$IfAWr/Pbmpx80TTPdTZV.0'}
+    authorized:
+      - 'ansible'
 ```
 
 Tests

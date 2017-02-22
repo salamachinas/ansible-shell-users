@@ -4,6 +4,5 @@ WORKDIR /tmp
 COPY  .  /tmp/ansible-shell-users
 
 RUN echo 127.0.0.1 > inventory
-RUN apt-get update && apt-get install -y sudo
 
 RUN ansible-playbook -i inventory ansible-shell-users/tests/provision.yml --connection=local --sudo

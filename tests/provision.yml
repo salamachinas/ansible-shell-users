@@ -1,4 +1,10 @@
 ---
-- hosts: all
+-
+  hosts: all
   roles:
-    - {role: ansible-shell-users, authorized: ['ansible'], promoted: ['ansible']}
+    - role: ansible-shell-users
+      authorized:
+        - ansible
+      users:
+        name: ansible
+        password: $1$xyz$IfAWr/Pbmpx80TTPdTZV.0

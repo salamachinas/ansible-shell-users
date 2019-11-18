@@ -8,3 +8,6 @@
       users:
         name: ansible
         password: $1$xyz$IfAWr/Pbmpx80TTPdTZV.0
+      shell:
+        - name: ansible
+          binary: /bin/false

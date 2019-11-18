@@ -12,3 +12,12 @@
   user: name={{ item.name }} password={{ item.password }} state=absent shell=/bin/bash
   no_log: true
   when: item.name not in authorized
+
+- name: Change shell for user
+  user:
+    name: "{{ item.name }}"
+    shell: "{{ item.binary }}"
+  with_items:
+    - "{{ shell }}"
+  no_log: true
+  when: shell is defined

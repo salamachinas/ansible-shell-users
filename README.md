@@ -41,6 +41,8 @@ Example Playbook
       - {name: 'example', password: '$1$xyz$IfAWr/Pbmpx80TTPdTZV.0'}
     authorized:
       - 'ansible'
+    shell:
+      - {name: 'example', binary: /bin/false}
 ```
 
 Tests

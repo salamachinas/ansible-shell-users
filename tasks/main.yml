@@ -2,14 +2,23 @@
 - name: add users
   with_items:
     - "{{ users }}"
-  user: name={{ item.name }} password={{ item.password }} state=present shell=/bin/bash
+  user:
+    name: "{{ item.name }}"
+    password: "{{ item.password }}"
+    state: present
+    shell: /bin/bash
   no_log: true
   when: item.name in authorized
 
 - name: remove users
   with_items:
     - "{{ users }}"
-  user: name={{ item.name }} password={{ item.password }} state=absent shell=/bin/bash
+  user:
+    name: "{{ item.name }}"
+    password: "{{ item.password }}"
+    state: absent
+    shell: /bin/bash
+    remove: yes
   no_log: true
   when: item.name not in authorized
 
